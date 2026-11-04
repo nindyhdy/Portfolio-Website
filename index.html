@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="id" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nindy Hendayanty - Portfolio</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- FontAwesome Icons CDN -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <!-- CSS Internal Disatukan -->
+    <style>
+        /* Base Styles & Typography */
+        body { 
+            font-family: 'Plus Jakarta Sans', sans-serif; 
+            background-color: #f1f5f9;
+            color: #1e293b;
+        }
+
+        /* Card Hover Effects */
+        .card-slate {
+            background-color: #ffffff;
+            border-radius: 1.5rem;
+            padding: 2rem;
+            border: 1px solid #e2e8f0;
+            box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+            transition: all 0.3s ease;
+        }
+
+        .card-slate:hover {
+            border-color: #cbd5e1;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05), 0 2px 4px -1px rgba(0, 0, 0, 0.03);
+        }
+
+        /* Hobby Image Zoom Effect */
+        .hobby-img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.5s ease;
+        }
+
+        .hobby-img-wrapper:hover .hobby-img {
+            transform: scale(1.05);
+        }
+    </style>
+</head>
+<body class="antialiased">
+
+    <!-- Navigasi Atas (Navbar Lengkap) -->
+    <header class="fixed top-0 left-0 w-full z-50 bg-white/80 backdrop-blur-md border-b border-slate-200">
+        <div class="max-w-5xl mx-auto px-4 h-16 flex items-center justify-between">
+            <a href="#home" class="font-extrabold text-slate-800 tracking-tight text-lg">
+                Nindy Hendayanty
+            </a>
+            <nav class="flex items-center gap-3 sm:gap-6 text-xs sm:text-sm font-semibold text-slate-600 overflow-x-auto py-2">
+                <a href="#home" class="hover:text-slate-900 transition whitespace-nowrap">Home</a>
+                <a href="#about" class="hover:text-slate-900 transition whitespace-nowrap">About</a>
+                <a href="#education" class="hover:text-slate-900 transition whitespace-nowrap">Education</a>
+                <a href="#skills" class="hover:text-slate-900 transition whitespace-nowrap">Skills</a>
+                <a href="#projects" class="hover:text-slate-900 transition whitespace-nowrap">Projects</a>
+                <a href="#hobbies" class="hover:text-slate-900 transition whitespace-nowrap">Hobbies</a>
+                <a href="#contact" class="hover:text-slate-900 transition whitespace-nowrap">Contact</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- SECTION HOME (Full Screen) -->
+    <section id="home" class="min-h-screen flex items-center justify-center pt-16 px-4">
+        <div class="max-w-5xl w-full bg-slate-800 text-white rounded-3xl p-8 md:p-14 shadow-xl flex flex-col md:flex-row items-center justify-between gap-8">
+            <div class="space-y-6 text-center md:text-left md:w-2/3">
+                <div class="inline-block bg-slate-700 text-slate-300 px-4 py-1.5 rounded-full text-xs font-semibold tracking-wide uppercase">
+                    Siswi Rekayasa Perangkat Lunak
+                </div>
+                <h1 class="text-4xl md:text-5xl font-extrabold tracking-tight leading-tight text-slate-100">
+                    Nindy Hendayanty
+                </h1>
+                <p class="text-slate-300 text-base md:text-lg leading-relaxed">
+                    Bersemangat dalam pengembangan web, membuat antarmuka interaktif, dan mempelajari solusi perangkat lunak menggunakan PHP & Laravel.
+                </p>
+                <div class="pt-2 flex flex-wrap justify-center md:justify-start gap-4">
+                    <a href="#about" class="inline-flex items-center gap-2 bg-slate-100 hover:bg-white text-slate-900 px-6 py-3 rounded-xl font-semibold shadow-md transition">
+                        Lihat Profil <i class="fa-solid fa-arrow-down text-sm"></i>
+                    </a>
+                    <a href="#contact" class="inline-flex items-center gap-2 bg-slate-700 hover:bg-slate-600 text-white px-6 py-3 rounded-xl font-semibold border border-slate-600 transition">
+                        Hubungi Saya
+                    </a>
+                </div>
+            </div>
+            <!-- Foto Profil -->
+            <div class="relative w-44 h-44 md:w-56 md:h-56 flex-shrink-0">
+                <div class="absolute inset-0 rounded-full bg-slate-600 border-4 border-slate-500 shadow-2xl overflow-hidden">
+                    <img src="profile.jpg" alt="Nindy Hendayanty" class="w-full h-full object-cover">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- KONTEN UTAMA -->
+    <main class="max-w-5xl mx-auto px-4 py-12 space-y-12">
+        
+        <!-- SECTION ABOUT -->
+        <section id="about" class="card-slate space-y-4">
+            <div class="flex items-center gap-3">
+                <div class="w-2 h-8 bg-slate-600 rounded-full"></div>
+                <h2 class="text-2xl font-bold text-slate-800">About Me</h2>
+            </div>
+            <p class="text-slate-600 leading-relaxed">
+                Halo! Saya Nindy Hendayanty, Siswi Rekayasa Perangkat Lunak yang memiliki ketertarikan pada dunia teknologi dan pengembangan website. Saya senang mengeksplorasi ide, menciptakan sesuatu yang kreatif, serta mempelajari hal-hal baru. Dengan semangat untuk terus berkembang, saya siap menghadapi tantangan dan mengubah setiap proses belajar menjadi sebuah karya.
+            </p>
+        </section>
+        
+        <!-- SECTION EDUCATION -->
+        <section id="education" class="card-slate space-y-4">
+            <div class="flex items-center gap-3">
+                <div class="w-2 h-8 bg-slate-600 rounded-full"></div>
+                <h2 class="text-2xl font-bold text-slate-800">Education</h2>
+            </div>
+            <div class="border-l-2 border-slate-200 pl-4 space-y-2">
+                <h3 class="text-lg font-bold text-slate-800">SMKN 1 Kawali - Rekayasa Perangkat Lunak (RPL)</h3>
+                <p class="text-slate-600 text-sm leading-relaxed">
+                    Mempelajari dasar-dasar pemrograman, perancangan basis data, pengembangan aplikasi web, serta bekerja dalam tim untuk menyelesaikan proyek perangkat lunak.
+                </p>
+            </div>
+        </section>
+        
+        <!-- SECTION SKILLS -->
+        <section id="skills" class="card-slate space-y-4">
+            <div class="flex items-center gap-3">
+                <div class="w-2 h-8 bg-slate-600 rounded-full"></div>
+                <h2 class="text-2xl font-bold text-slate-800">Skills</h2>
+            </div>
+            <div class="grid grid-cols-2 sm:grid-cols-4 gap-4 pt-2">
+                <div class="bg-slate-50 border border-slate-200 p-4 rounded-2xl text-center font-semibold text-slate-700">Laravel</div>
+                <div class="bg-slate-50 border border-slate-200 p-4 rounded-2xl text-center font-semibold text-slate-700">PHP</div>
+                <div class="bg-slate-50 border border-slate-200 p-4 rounded-2xl text-center font-semibold text-slate-700">Html&Css</div>
+                <div class="bg-slate-50 border border-slate-200 p-4 rounded-2xl text-center font-semibold text-slate-700">UI/UX Figma</div>
+            </div>
+        </section>
+
+        <!-- SECTION PROJECTS -->
+        <section id="projects" class="card-slate space-y-6">
+            <div class="flex items-center gap-3">
+                <div class="w-2 h-8 bg-slate-600 rounded-full"></div>
+                <h2 class="text-2xl font-bold text-slate-800">Projects</h2>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <!-- Proyek 1 -->
+                <div class="bg-slate-50 border border-slate-200 rounded-2xl p-6 space-y-3">
+                    <h3 class="text-lg font-bold text-slate-800">Website Profil Perusahaan</h3>
+                    <p class="text-slate-600 text-sm leading-relaxed">
+                        Mengembangkan website profil perusahaan profesional yang dirancang untuk menyajikan latar belakang perusahaan, penawaran layanan, dan informasi secara efektif.
+                    </p>
+                    <div class="flex gap-2 pt-2">
+                        <span class="bg-slate-200 text-slate-750 text-xs px-3 py-1 rounded-full font-medium">september 2026</span>
+                        <span class="bg-slate-200 text-slate-700 text-xs px-3 py-1 rounded-full font-medium">Laravel</span>
+                        <span class="bg-slate-200 text-slate-700 text-xs px-3 py-1 rounded-full font-medium">PHP</span>
+                        <span class="bg-slate-200 text-slate-700 text-xs px-3 py-1 rounded-full font-medium">HTML/CSS</span>
+                        <span class="bg-slate-200 text-slate-700 text-xs px-3 py-1 rounded-full font-medium">MySQL</span>
+                    </div>
+                </div>
+                <!-- Proyek 2 -->
+                <div class="bg-slate-50 border border-slate-200 rounded-2xl p-6 space-y-3">
+                    <h3 class="text-lg font-bold text-slate-800">Aplikasi Web Buku Tamu</h3>
+                    <p class="text-slate-600 text-sm leading-relaxed">
+                        Membangun sistem buku tamu digital berbasis web menggunakan framework Laravel untuk mencatat, menyimpan, dan mengorganisasi data pengunjung ke dalam database MySQL.
+                    </p>
+                    <div class="flex gap-2 pt-2">
+                        <span class="bg-slate-200 text-slate-750 text-xs px-3 py-1 rounded-full font-medium">januari 2026</span>
+                        <span class="bg-slate-200 text-slate-700 text-xs px-3 py-1 rounded-full font-medium">Laravel</span>
+                        <span class="bg-slate-200 text-slate-700 text-xs px-3 py-1 rounded-full font-medium">PHP</span>
+                        <span class="bg-slate-200 text-slate-700 text-xs px-3 py-1 rounded-full font-medium">HTML/CSS</span>
+                        <span class="bg-slate-200 text-slate-700 text-xs px-3 py-1 rounded-full font-medium">MySQL</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SECTION HOBBIES -->
+        <section id="hobbies" class="card-slate space-y-6">
+            <div class="flex items-center gap-3">
+                <div class="w-2 h-8 bg-slate-600 rounded-full"></div>
+                <h2 class="text-2xl font-bold text-slate-800">Hobbies</h2>
+            </div>
+
+            <!-- Penjelasan Hobi -->
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                <div class="bg-slate-50 border border-slate-200 rounded-2xl p-5 flex items-start gap-4">
+                    <div class="bg-emerald-100 text-emerald-700 p-3.5 rounded-xl text-xl flex-shrink-0">
+                        <i class="fa-solid fa-mountain text-2xl"></i>
+                    </div>
+                    <div>
+                        <h3 class="text-lg font-bold text-slate-800">Hiking & Mendaki Gunung</h3>
+                        <p class="text-slate-600 text-sm mt-1 leading-relaxed">
+                            Menikmati tantangan menjelajahi alam lepas, melatih ketahanan fisik, fokus, serta daya juang untuk mencapai puncak.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="bg-slate-50 border border-slate-200 rounded-2xl p-5 flex items-start gap-4">
+                    <div class="bg-teal-100 text-teal-700 p-3.5 rounded-xl text-xl flex-shrink-0">
+                        <i class="fa-solid fa-tree text-2xl"></i>
+                    </div>
+                    <div>
+                        <h3 class="text-lg font-bold text-slate-800">Pencinta Alam & Eksplorasi</h3>
+                        <p class="text-slate-600 text-sm mt-1 leading-relaxed">
+                            Senang mengeksplorasi keindahan alam, menjaga kelestarian lingkungan, dan belajar bekerja sama dalam kegiatan luar ruangan.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Galeri 2 Foto Hiking/Alam (Aspect Ratio 16:9) -->
+            <div class="pt-2">
+                <h3 class="text-sm font-semibold text-slate-500 uppercase tracking-wider mb-4">Dokumentasi Perjalanan</h3>
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                    <!-- Foto 1 (16:9) -->
+                    <div class="relative aspect-video rounded-2xl overflow-hidden shadow-sm border border-slate-200 hobby-img-wrapper">
+                        <img src="hiking1.jpg" alt="Hiking 1" class="hobby-img">
+                    </div>
+                    <!-- Foto 2 (16:9) -->
+                    <div class="relative aspect-video rounded-2xl overflow-hidden shadow-sm border border-slate-200 hobby-img-wrapper">
+                        <img src="hiking2.jpg" alt="Hiking 2" class="hobby-img">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SECTION CONTACT (Paling Bawah) -->
+        <section id="contact" class="bg-slate-800 text-white rounded-3xl p-8 md:p-12 shadow-xl text-center space-y-6">
+            <div class="inline-block bg-slate-700 text-slate-300 px-4 py-1.5 rounded-full text-xs font-semibold tracking-wide uppercase">
+                Get In Touch
+            </div>
+            <h2 class="text-3xl md:text-4xl font-extrabold tracking-tight text-slate-100">
+                Mari Bekerjasama!
+            </h2>
+            <p class="text-slate-300 text-base md:text-lg max-w-2xl mx-auto leading-relaxed">
+                Punya proyek yang ingin dikerjakan, ingin berkolaborasi, atau sekadar ingin menyapa? Silakan hubungi saya melalui kontak di bawah ini.
+            </p>
+
+            <!-- Tombol Kontak Langsung -->
+            <div class="pt-4 flex flex-wrap gap-4 justify-center">
+                <!-- TikTok -->
+                <a href="https://www.tiktok.com/@n_dyw" target="_blank" class="inline-flex items-center gap-3 bg-slate-900 hover:bg-black text-white px-6 py-3.5 rounded-xl font-semibold shadow-md hover:shadow-lg transition transform hover:-translate-y-0.5 border border-slate-700">
+                    <i class="fa-brands fa-tiktok text-xl"></i>
+                    <span>@n_dyw</span>
+                </a>
+                
+                <!-- Email -->
+                <a href="mailto:nindihendayanti@gmail.com" class="inline-flex items-center gap-3 bg-slate-700 hover:bg-slate-600 text-slate-100 border border-slate-600 px-6 py-3.5 rounded-xl font-semibold shadow-md hover:shadow-lg transition transform hover:-translate-y-0.5">
+                    <i class="fa-regular fa-envelope text-xl text-slate-300"></i>
+                    <span>nindihendayanti@gmail.com</span>
+                </a>
+
+                <!-- Instagram -->
+                <a href="https://www.instagram.com/nndiidy" target="_blank" class="inline-flex items-center gap-3 bg-gradient-to-r from-purple-600 via-pink-600 to-amber-500 hover:opacity-90 text-white px-6 py-3.5 rounded-xl font-semibold shadow-md hover:shadow-lg transition transform hover:-translate-y-0.5">
+                    <i class="fa-brands fa-instagram text-xl"></i>
+                    <span>@nndiidy</span>
+                </a>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="text-center py-8 text-slate-500 text-sm border-t border-slate-200 mt-12">
+        <p>&copy; 2026 Nindy Hendayanty. All rights reserved.</p>
+    </footer>
+
+</body>
+</html>
